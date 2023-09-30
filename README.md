@@ -73,14 +73,14 @@ import { onMount } from 'svelte';
 onMount(async () => {
 	// In Svelte, a hot module refresh can cause lockfile problems
 	// so we assign the ipfs node to globalThis to avoid lock file issues
-	if (!globalThis.ipfsNode) {
+	if (!globalThis.ipfsNode1) {
 		// no ipfs saved to globalThis, so load it up
 		const IPFSmodule = await import('../modules/ipfs-core/ipfs-core.js');
 		const IPFS = IPFSmodule.default;
-		ipfsNode = await IPFS.create();
-		globalThis.ipfsNode = ipfsNode;
+		ipfsNode1 = await IPFS.create();
+		globalThis.ipfsNode1 = ipfsNode1;
 	} else {
-		ipfsNode = globalThis.ipfsNode;
+		ipfsNode1 = globalThis.ipfsNode1;
 	}
 });
 ```

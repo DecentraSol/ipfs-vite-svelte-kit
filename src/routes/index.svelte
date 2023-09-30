@@ -86,17 +86,17 @@
 		//1. Create my own addressDB and receive a DAL (decentralized address link)
 		const aliceDAL = "aliceDAL"
 		const aliceDALDB = await orbitdb1.open(aliceDAL, { type: 'keyvalue' })
-		await aliceDALDB.put('NAME', "Nico Krause")
-		await aliceDALDB.put('CITY', "Eggenfelden")
+		await aliceDALDB.put('NAME', "Alice Brown")
+		await aliceDALDB.put('CITY', "Istanbul")
 		const allAlice = await aliceDALDB.all()
 		console.log("allAlice",allAlice)
 
 		//2. Bobs DAL
 		const bobDAL = "bobDAL"
 		const bobDALDB = await orbitdb2.open(bobDAL, { type: 'keyvalue' })
-		await bobDALDB.put('NAME', "Irina Krause")
-		await bobDALDB.put('STREET', "Mashinaya ul. 1b/1")
-		await bobDALDB.put('CITY', "Jekaterinburg")
+		await bobDALDB.put('NAME', "Bob Smith")
+		await bobDALDB.put('STREET', "The Address Downtown")
+		await bobDALDB.put('CITY', "Dubai")
 		const allBob = await bobDALDB.all()
 		console.log("allBob",allBob)
 
@@ -127,7 +127,7 @@
 		console.log("allAliceaddressbook",allAliceaddressbook)
 
 		//now change bobs address (Bob is moving to a new address)
-		const newAddress = "Chevchenko ul. 20"
+		const newAddress = "Jumeirah Beach"
 		console.log("changing bobs address",newAddress)
 		await bobDALDB.put('STREET',newAddress)
 

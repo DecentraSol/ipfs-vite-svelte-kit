@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/14-orbit-db-svelte-kit.iml" filepath="$PROJECT_DIR$/.idea/14-orbit-db-svelte-kit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ipfs-vite-svelte-kit.iml" filepath="$PROJECT_DIR$/.idea/ipfs-vite-svelte-kit.iml" />
     </modules>
   </component>
 </project>
